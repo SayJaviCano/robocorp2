@@ -11,7 +11,7 @@ Library           RPA.Tables
 Library           RPA.Cloud.Azure
 Library           RPA.PDF
 Library           RPA.Archive
-Library           RPA.Robocloud.Secrets
+Library           RPA.Robocorp.Vault
 
 *** Tasks ***
 Pedir robots de RobotSpareBin Industries Inc
@@ -33,9 +33,9 @@ Pedir robots de RobotSpareBin Industries Inc
 
 *** Keywords ***
 Abrir la web de pedidos de robots
-    # ${secret}    Get Secret    robot2
-    # Open Available Browser    ${secret}[url]
-    Open Available Browser    https://robotsparebinindustries.com/#/robot-order
+    ${secret}    Get Secret    robot2
+    Open Available Browser    ${secret}[url]
+    # Open Available Browser    https://robotsparebinindustries.com/#/robot-order
 
 Aceptar aviso legal
     ${aceptar_aviso_legal}    Is Element Visible    class:btn-dark
