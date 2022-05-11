@@ -23,9 +23,7 @@ Pedir robots de RobotSpareBin Industries Inc
         Ver robot
         Enviar pedido
         ${pdf}=    Guardar cada recibo como un PDF    ${pedido}[Order number]
-        Log    ${pdf}
         ${screenshot}=    Tomar una captura de la imagen del robot    ${pedido}[Order number]
-        Log    ${screenshot}
         Incrustar la imagen del robot con el PDF del recibo    ${screenshot}    ${pdf}    ${pedido}[Order number]
         Pedir otro
     END
